@@ -28,6 +28,10 @@ steps:
       echo "##vso[task.setvariable variable=ARM_CLIENT_SECRET]${servicePrincipalKey}"
       echo "##vso[task.setvariable variable=ARM_TENANT_ID]${tenantId}"
 
+# Installing git
+- script: pip install git
+  displayName: 'Install Git'
+
 - script: pip install ansible
   displayName: 'Install Ansible'
 
